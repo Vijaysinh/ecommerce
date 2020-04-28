@@ -1,0 +1,102 @@
+.container-fluid{margin-top:70px;
+    margin-bottom: 45px;
+    .CategoryBlkContainer{background-color:#f7f7f7;height:100%;
+        .CategoryBlkSec{height: 100%;margin: 0px;padding: 0px;display: flex;flex-flow: row;
+            &__leftnav{padding: 5px;display:inline-block;
+                &--filtersSection{padding: 18px 2px 10px;
+                    position: relative;
+                }
+            }
+            &__rightnav{padding: 5px;
+                &--SortSec{padding: 20px 15px 10px;position: relative;
+                    h3{display: inline-block;float: left;margin: 0;margin-right:25px;}
+                    .SortBlk{padding: 7px;margin: 0;
+                        li{list-style: none;display: inline-block;margin-right: 20px;margin-left: 20px;
+                            a{color:#000;
+                                &:hover{
+                                    text-decoration:none;
+                                }
+                                &.active{border-bottom:1px solid #2874f0;color:#2874f0;}
+                            }
+                        }
+                    }
+                }
+                &--productListSec{padding: 20px 10 20px 10px;white-space: nowrap;width: 100%;
+                    .product_cat_view{display: inline-block;vertical-align: top;width:20%;float:left;padding:0px;margin-bottom:10px;
+                        .productBlock{position: relative;margin-bottom:10px;padding: 2px;
+                            &__img{
+                                img{width:195px;height:195px;}
+                            }
+                            &__info{
+                                .productInfoDetaills{text-align:left;margin-left:8px;letter-spacing:0.7px;padding-left:0px;padding-right:0px;
+                                    .productNameLabel{margin:0;}
+                                    .productPriceBlk{margin:0;
+                                        .tr-inr:before {
+                                            content: "\20B9";
+                                        }
+                                        .sellingPrice{color:#000;font-weight:bold;}
+                                        .actualPrice{text-decoration:line-through;padding-right:5px;color:#999;}
+                                        .discountLabel{color:green;}
+                                    }
+                                }
+                                .cartBtn{border: 1px solid #ccc;border-radius: 20px;background-color: #FFC107;                           padding: 7px 15px;
+                                    line-height: 18px;font-size: 15px;margin-top: 10px;margin-bottom: 10px;cursor:pointer;
+                                    &:focus{outline:0;}
+                                }
+                            }
+                        }
+                    }
+                } 
+            }
+        }
+    }
+} 
+@media (max-width: 480px) {
+    .header__content{padding: 10px 16px 20px !important;}
+    .container-fluid{padding:0px;margin-top:65px;
+        .CategoryBlkContainer{
+            .CategoryBlkSec{ 
+                &__leftnav{display:none !important;}
+                &__rightnav{padding:0px;
+                    &--SortSec{display:none;}
+                    &--MobSortSec{display:flex !important;
+                        position: fixed;z-index: 999;display: inline-block;width: 100%;background-color:#f7f7f7;
+                        border: 1px solid #f3f3f3;box-shadow: 0 0 1px rgba(239,233,233,.4);box-sizing: border-box;margin:0;
+                        .sortFilter{padding: 10px;border: 1px solid #ccc;}
+                        a{text-align: center;padding: 12px 30px;color:#000;}
+                        .FilterBlk{}
+                    }
+                    &--productListSec{padding:0px;margin-top:46px;margin-bottom:40px;
+                        .product_cat_view{width:50%;margin-bottom:0;
+                            .productBlock{border:1px solid #ccc;margin-bottom:0;
+                                &__img{padding:5px;
+                                    img{width:150px;}
+                                }
+                            }
+                        }
+                    }
+                }
+            } 
+        }
+    }
+}
+    .CategoryBlkSec__leftnav{display:none;}
+    #filterModal{
+        .priceSlider{
+            input{border:0;background:transparent;font-weight:bold;}
+            .ui-slider{
+                height: 3px;background: #2874f0;
+                .ui-widget-header{background: #2874f0;}
+                .ui-slider-handle{border-radius: 50%;top: -9px;cursor:pointer;}
+            }
+        } 
+    }
+   #SortModal{
+       .SortBlk{padding:0px;
+        li{list-style:none;}
+       }
+        
+  }
+
+
+
